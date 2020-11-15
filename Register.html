@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+ <head>
+	<meta charset="utf-8">
+	<title>约吧Together注册</title>
+	<style type="text/css">
+		body {  
+			background-image: url("login/整体底图3.jpg");
+			background-size: cover;
+		}
+		#content {
+		position: relative;
+		top: 100px;
+		margin:auto;
+		overflow: hidden;
+		}
+		#content1 {
+		position: relative;
+		top: 15px;
+		height:70px;
+		margin:auto;
+		overflow: hidden;
+		}
+		.tab1 {
+			position:relative;
+			top:10px;
+		}
+		tr
+		{
+			height:25px;
+			align:center;
+		}
+		td {
+			font-family:"Candara";
+			font-size:20px;
+			font-weight:bold;
+		}
+		#in1,#in2,#in3,#in4,#in5,#in6 {
+			height: 20px;
+			font-size: 18px;
+		}
+	</style>
+	<script type="text/javascript">
+	function checkId(){
+	if (document.getElementById("in2").value == ""
+			&& document.getElementById("in3").value == ""&& document.getElementById("in4").value == "") {
+				alert("请输入注册用户名和密码！");
+				return false;
+		}else if(document.getElementById("in1").value == ""){
+				alert("请输入邮箱！");
+				return false;
+			}else if(document.getElementById("in2").value == ""){
+				alert("请输入用户名");
+				return false;
+			}else if(document.getElementById("in3").value == ""){
+				alert("请输入密码！");
+				return false;
+			}else if(document.getElementById("in4").value == ""){
+				alert("请输入确认密码！");
+				return false;
+			}else if(document.getElementById("in3").value != document.getElementById("in4").value){
+				alert("您两次的密码不相同！");
+				document.getElementById("in4").value="";
+				document.getElementById("in3").value="";
+				return false;
+			}else{
+				return true;
+			}
+	}
+	</script>
+		
+ </head>
+ <body>
+ <center>
+ <div id="content">
+	<img src="login/约吧logo缩小版.png">
+	<table border="0" cellpadding="0" cellspacing="2" class="tab1">
+		<tr>
+			<td align="left">Email</td>
+			<td><input type="text" name="Email" id="in1" /></td>
+		</tr>
+		<tr>
+			<td align="left">Account</td>
+			<td><input type="text" name="Account" id="in2" /></td>
+		</tr>
+		<tr>
+			<td align="left">Password</td>
+			<td><input type="password" name="Password" id="in3" /></td>
+		</tr>
+		<tr>
+			<td align="left">Confirm</td>
+			<td><input type="password" name="Confirm Password" id="in4" /></td>
+		</tr>
+		<tr>
+			<td align="left">Sex(opt.)</td>
+			<td><input type="text" name="Sex" id="in5" /></td>
+		</tr>
+		<tr>
+			<td align="left">Tel(opt.)</td>
+			<td><input type="text" name="Telephone" id="in6" /></td>
+		</tr>
+	</table>
+	<div id="content1"><a href=""><img src="Register/Register2.png" onclick="checkId()"></a></div>
+ </div>
+</center>
+ </body>
+</html>
+

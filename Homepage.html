@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"> 
+  <title>约吧Together主页</title> 
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+  <style type="text/css">
+	*{margin: 0px;padding: 0px;border: 0px;}
+	input,select {
+		border-radius: 4px; 
+		border: 1px solid #CCC;
+		height:25px;
+	}
+	ul
+	{
+		list-style-type:none;
+		overflow:hidden;
+	}
+	a:link,a:visited
+	{
+		display:block;
+		border-radius: 4px; 
+		border: 1px solid #CCC;
+		font-weight:bold;
+		text-align:center;
+		padding:5px;
+		text-decoration:none;
+	}
+	a:hover,a:active
+	{
+		background-color:#7A991A;
+	}
+	textarea{
+		border-radius: 4px; 
+		border: 1px solid #CCC;
+		width: 90%;
+		height: 100px;
+		resize: none;
+	}
+  </style>
+</head>
+
+ <body style="overflow: auto;">
+ <div class="container">
+	<!-- 页面最上部分留空 -->
+	<div class="row">
+		<div class="col-md-12"  style="height:50px;">
+		</div>
+	</div>
+	<div class="row" style="height:850px;">
+		<div class="col-md-1" style="height:850px;">
+		</div>
+		<div class="col-md-1" style="height:850px;border-radius: 4px; border: 1px solid #CCC;">
+		</div>
+		<div class="col-md-8" style="height:850px;border-radius: 4px; border: 1px solid #CCC;">
+			<!-- 任务发布部分 -->
+			<div class="row">
+				<div class="col-md-12" style="height:200px;border-radius: 4px; border: 1px solid #CCC;">
+				<center>
+					<div class="row" style="padding-top:10px;">	
+						<div class="col-md-12" style="height:45px;">
+						<center>
+							主题:<input type="text" name="theme" style="width:170px;"/>									
+							分类:<select>
+								<option value="study">学习</option>
+								<option value="joy">娱乐</option>
+								<option value="life">生活</option>
+							</select> 
+							上限:<input type="number" name="limitation" max="20" min="1" style="width:40px;"/>人
+							截止到:<input type="date" name="date" value="2017-07-13" style="width:140px;" />
+						</center>
+						</div>
+					</div>
+					<!-- 任务发布文本框 -->
+					<div class="row">	
+						<div class="col-md-12" style="height:110px;">
+							<textarea></textarea>	
+						</div>
+					</div>
+					<div class="row">	
+						<div class="col-md-12">
+							<input type="submit" name="submit" value="发布" style="width:20%;height:30px;"/>
+						</div>
+					</div>
+				</center>
+				</div>
+			</div>
+			<!-- 任务浏览部分 -->
+			<div class="row">
+				<div class="col-md-1" style="height:650px;overflow:hidden;border-radius: 4px; border: 1px solid #CCC;">				
+					<ul style="width:50px;padding-top:36px;">
+						<!-- 根据类别查询任务 -->
+						<li style="width:50px;float:right;"><a href="" target="iframe_b"><p>学</p><p>习</p></a></li>
+						<li style="width:50px;float:right;"><a href="" target="iframe_b"><p>娱</p><p>乐</p></a></li>
+						<li style="width:50px;float:right;"><a href="" target="iframe_b"><p>生</p><p>活</p></a></li>				
+					</ul>
+				</div>
+				<div class="col-md-11" style="height:650px;border-radius: 4px; border: 1px solid #CCC;">
+					<div class="row">	
+						<div class="col-md-12" style="height:650px;padding-top:5px;border-radius: 4px; border: 1px solid #CCC;">
+							<!-- 导航栏 -->
+							<div class="row" style="height:30px;">
+								<div class="col-md-7" style="height:30px;">
+									<ul>
+										<li style="float:left;"><a href="" target="">接受任务</a></li>
+										<li style="float:left;"><a href="" target="">忽略任务</a></li>
+										<li style="float:left;"><a href="" target="">举报任务</a></li>
+									</ul>	
+								</div>
+								<div class="col-md-5" style="height:30px;">
+								<center>
+									<input type="text" name="search" />
+									<input type="submit" name="submit" value="查询" />
+								</center>
+								</div>
+							</div>
+							<!-- 任务显示 -->
+							<div class="row">	
+								<div class="col-md-12" style="height:613px;border-radius: 4px; border: 1px solid #CCC;">
+									<iframe src="" width=100% height="613" frameborder="0" name="iframe_b"></iframe>
+								</div>						
+							</div>
+						</div>	
+					</div>				
+				</div>
+			</div>
+		</div>
+		<div class="col-md-1" style="height:850px;border-radius: 4px; border: 1px solid #CCC;">
+		</div>
+		<div class="col-md-1" style="height:850px;">
+		</div>
+	</div>
+</div>	
+ </body>
+</html>
